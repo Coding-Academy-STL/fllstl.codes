@@ -64,6 +64,14 @@ const people = [
             },
         ],
     },
+    {
+        name: 'Aiden Lambert',
+        role: 'Coach',
+    },
+    {
+        name: 'Ashmit Tendolkar',
+        role: 'Coach',
+    }
 ]
 
 const About: NextPage = () => {
@@ -84,8 +92,8 @@ const About: NextPage = () => {
                     <AboutCard
                         key={idx}
                         name={p.name}
-                        role={p.role}
-                        bio={p.bio}
+                        role={p.role || 'Coach'}
+                        bio={p.bio || ''}
                         links={p.links}
                     />
                 ))}
