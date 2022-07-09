@@ -70,7 +70,7 @@ export default function Layout({
                         toggleDarkMode={toggleDarkMode}
                     />
                     <main className={cx({ dark: isDarkMode })}>{children}</main>
-                    <div className='fixed bottom-8 right-8'><a href='#' className={cx({ 'pointer-events-none': scrollTop === 0 })}><ChevronDoubleUpIcon className={cx('h-10 w-10 opacity-100 transition-all delay-200', { 'opacity-0': scrollTop === 0 })} /></a></div>
+                    <div className='fixed bottom-8 right-8 text-slate-700 dark:text-slate-50'><a href='#' className={cx({ 'pointer-events-none': scrollTop === 0 })}><ChevronDoubleUpIcon className={cx('h-10 w-10 opacity-100 transition-all delay-200', { 'opacity-0': scrollTop === 0 })} /></a></div>
                     <Footer />
                 </div>
             </div>
