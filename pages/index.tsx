@@ -142,7 +142,7 @@ const About: NextPage = () => {
                     See how you can take advantage of the free services provided
                     by our experienced alumni!
                 </p>
-                <div className="flex flex-col justify-center flex-wrap rounded-xl p-4 mb-4 text-slate-700 dark:text-slate-50">
+                <div className="flex flex-col justify-center flex-wrap rounded-xl p-4 md:p-8 md:pl-12 mb-4 text-slate-700 dark:text-slate-50">
                     <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-cyan-500 via-cyan-400 to-blue-500 p-3">
                             1
