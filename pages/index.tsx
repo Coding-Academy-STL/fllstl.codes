@@ -54,7 +54,15 @@ const people = [
     {
         name: 'Samuel Wiseman',
         role: 'Coach',
-        bio: '',
+        bio: 'Samuel Wiseman, a rising junior at LHWHS who is pursuing a software engineering career. Programmer with over 6 years experience, enrolled at numerous clubs and avid Java hater.',
+        links: [
+            {
+                link: 'https://github.com/notSam25',
+                node: (
+                    <FaGithub className="inline-block mr-2 mb-2 w-4 fill-slate-700 dark:fill-slate-50" />
+                ),
+            },
+        ],
     },
 ]
 
