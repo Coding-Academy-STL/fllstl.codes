@@ -35,6 +35,6 @@ export default async function handler(
       text: 'We have received your message and will be contacting you as soon as we can!',
     });
 
-    res.redirect(307, '/');
+    res.redirect(303, '/');
   }
 }
