@@ -1,14 +1,40 @@
-import Navbar from '../components/navbar'
+// types
 import type { NextPage } from 'next'
+
+// components
 import Layout from '../components/layout'
+import Navbar from '../components/navbar'
 import AboutCard from '../components/aboutCard'
+
+// styles
+// icons
+import { FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
 
 const people = [
     {
         name: 'Abheek Dhawan',
         role: 'Coach',
         bio: "An avid programmer, Abheek competed in FLL for 4 years, achieving the Champion's Award in 2019 at the Razorback Invitational. He has continued with his robotics journey as a programmer for the Ladue HWHS FRC team.",
-        links: [{ link: 'https://github.com/ADawesomeguy', name: 'GitHub' }],
+        links: [
+            {
+                link: 'https://github.com/ADawesomeguy',
+                node: (
+                    <FaGithub className="inline-block mr-2 mb-2 w-4 fill-slate-700 dark:fill-slate-50" />
+                ),
+            },
+            {
+                link: 'https://instagram.com/abheek_dhawan',
+                node: (
+                    <FaInstagram className="inline-block mr-2 mb-2 w-4 fill-slate-700 dark:fill-slate-50" />
+                ),
+            },
+            {
+                link: 'mailto:abheekd@protonmail.com',
+                node: (
+                    <FaEnvelope className="inline-block mr-2 mb-2 w-4 fill-slate-700 dark:fill-slate-50" />
+                ),
+            },
+        ],
     },
     {
         name: 'Aric Wang',
@@ -201,15 +227,30 @@ const About: NextPage = () => {
                         />
                     </div>
                     <div className="mb-6">
-                        <select name='inquiryReason' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
-                        <option value='Beginner coaching'>Beginner Programming Coaching</option>
-                        <option value='Intermediate coaching'>Intermediate Programming Coaching</option>
-                        <option value='Advanced coaching'>Advanced Programming Coaching</option>
-                        <option value='Other'>Other</option>
+                        <select
+                            name="inquiryReason"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
+                        >
+                            <option value="Beginner coaching">
+                                Beginner Programming Coaching
+                            </option>
+                            <option value="Intermediate coaching">
+                                Intermediate Programming Coaching
+                            </option>
+                            <option value="Advanced coaching">
+                                Advanced Programming Coaching
+                            </option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     <div className="mb-6">
-                        <textarea placeholder='Inquiry' name='inquiryData' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                        <textarea
+                            placeholder="Inquiry"
+                            name="inquiryData"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required
+                        />
                     </div>
                     <input
                         type="submit"

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { ReactNode } from 'react'
 
 export default function Card({
     titleText,
@@ -12,7 +13,7 @@ export default function Card({
     subtitleText: string
     descriptionText: string
     image: string
-    links?: Array<Record<string, string>>
+    links?: Array<{ link: string, node: ReactNode }>
 }) {
     return (
         <div className="flex flex-col max-w-sm rounded-md overflow-hidden shadow-lg bg-slate-100 dark:bg-gray-700 transition-all my-2 sm:m-3 md:m-4 lg:m-5">
@@ -33,9 +34,7 @@ export default function Card({
                     {links?.map((l, idx) => (
                         <Link key={idx} href={l.link}>
                             <a>
-                                <span className="inline-block bg-slate-100 border border-slate-900 dark:bg-slate-900 dark:border-slate-50 rounded-full px-3 py-1 text-sm font-semibold text-slate-700 dark:text-slate-50 mr-2 mb-2">
-                                    {l.name}
-                                </span>
+                                {l.node}
                             </a>
                         </Link>
                     ))}
