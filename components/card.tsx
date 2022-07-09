@@ -13,11 +13,17 @@ export default function Card({
     subtitleText: string
     descriptionText: string
     image: string
-    links?: Array<{ link: string, node: ReactNode }>
+    links?: Array<{ link: string; node: ReactNode }>
 }) {
     return (
         <div className="flex flex-col max-w-sm rounded-md overflow-hidden shadow-lg bg-slate-100 dark:bg-gray-700 transition-all my-2 sm:m-3 md:m-4 lg:m-5">
-            <Image src={image} width="612" height="612" alt="" />
+            <Image
+                className="object-cover"
+                src={image}
+                width="612"
+                height="612"
+                alt=""
+            />
             <div className="px-6 py-4">
                 <div className="mb-2">
                     <h1 className="font-bold text-xl dark:text-white">
@@ -33,9 +39,7 @@ export default function Card({
                 <div className="flex flex-row mt-auto">
                     {links?.map((l, idx) => (
                         <Link key={idx} href={l.link}>
-                            <a>
-                                {l.node}
-                            </a>
+                            <a>{l.node}</a>
                         </Link>
                     ))}
                 </div>

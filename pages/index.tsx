@@ -51,6 +51,7 @@ const people = [
     },
     {
         name: 'Will Feng',
+        image: '/img/team/will-feng.png',
         role: 'Coach',
         bio: 'Will Feng, a rising junior at LHWHS, is a dedicated programmer who enjoys challenges and problem solving. He plays water polo and participates in many clubs and activities. He hopes one day to become a engineer.',
     },
@@ -100,6 +101,7 @@ const About: NextPage = () => {
                     <AboutCard
                         key={idx}
                         name={p.name}
+                        pic={p.image || '/img/team/profile-pic-default.jpg'}
                         role={p.role || 'Coach'}
                         bio={p.bio || ''}
                         links={p.links}
