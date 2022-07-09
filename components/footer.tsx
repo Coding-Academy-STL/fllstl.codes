@@ -110,7 +110,7 @@ export default function Footer() {
 
         <div className="text-center">
             &copy; 2022{' '}
-            <a href="#">Coders Academy St. Louis. All rights reserved.</a>
+            <a href="#">Coding Academy St. Louis. All rights reserved.</a>
         </div>
         </footer>
     );
