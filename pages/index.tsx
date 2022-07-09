@@ -106,7 +106,7 @@ const About: NextPage = () => {
                 </div>
             </div>
             <div
-                id="contact"
+                id="get-started"
                 className="flex flex-wrap px-5 justify-center overflow-hidden pt-12 pb-8 lg:py-24 transition-all"
             >
                 <h1 className="block w-full font-extrabold text-center text-5xl text-slate-700 dark:text-slate-50 mb-3">
@@ -168,6 +168,55 @@ const About: NextPage = () => {
                         </div>
                     </div>
                 </div>
+            </div>
+            <div
+                id="contact"
+                className="flex flex-wrap px-5 justify-center overflow-hidden pt-12 pb-8 lg:py-24 transition-all"
+            >
+                <h1 className="block w-full font-extrabold text-center text-5xl text-slate-700 dark:text-slate-50 mb-5">
+                    Contact
+                </h1>
+
+                <form
+                    action="/api/contact"
+                    method="post"
+                    className="flex flex-col grow sm:max-w-md md:max-w-lg lg:max-w-xl"
+                >
+                    <div className="mb-6">
+                        <input
+                            type="text"
+                            name="personName"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Name"
+                            required
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <input
+                            type="email"
+                            name="personEmail"
+                            className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="Email"
+                            required
+                        />
+                    </div>
+                    <div className="mb-6">
+                        <select name='inquiryReason' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+                        <option value='Beginner coaching'>Beginner Programming Coaching</option>
+                        <option value='Intermediate coaching'>Intermediate Programming Coaching</option>
+                        <option value='Advanced coaching'>Advanced Programming Coaching</option>
+                        <option value='Other'>Other</option>
+                        </select>
+                    </div>
+                    <div className="mb-6">
+                        <textarea placeholder='Inquiry' name='inquiryData' className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required />
+                    </div>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    />
+                </form>
             </div>
         </Layout>
     )
