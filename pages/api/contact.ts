@@ -35,7 +35,7 @@ export default async function handler(
       text: 'We have received your message and will be contacting you as soon as we can!',
     });
 
-    res.redirect('/');
+    res.redirect(307, '/');
   }
   else {
     res.status(405).json({ error: `invalid method: ${req.method}` });
