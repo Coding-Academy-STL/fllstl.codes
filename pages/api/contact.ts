@@ -37,7 +37,4 @@ export default async function handler(
 
     res.redirect(307, '/');
   }
-  else {
-    res.status(405).json({ error: `invalid method: ${req.method}` });
-  }
 }
