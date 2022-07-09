@@ -143,15 +143,15 @@ const About: NextPage = () => {
                     by our experienced alumni!
                 </p>
                 <div className="flex flex-col justify-center flex-wrap rounded-xl p-4 mb-4 text-slate-700 dark:text-slate-50">
-                    <div className="flex flex-row items-start space-x-4 my-3 md:my-5">
+                    <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-cyan-500 via-cyan-400 to-blue-500 p-3">
                             1
                         </div>
                         <div className="flex-auto md:max-w-lg lg:max-w-2xl">
-                            <h5 className="no-underline font-bold md:text-xl lg:text-2xl">
+                            <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Contact us!
                             </h5>
-                            <p className="text-sm md:text-lg">
+                            <p className="text-md md:text-lg">
                                 You can contact us through this website, by{' '}
                                 <a>phone</a>, or through our{' '}
                                 <a href="mailto:contact@fllstl.codes">email</a>.
@@ -159,15 +159,15 @@ const About: NextPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-start space-x-4 my-3 md:my-5">
+                    <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-blue-600 via-indigo-500 to-purple-500 p-3">
                             2
                         </div>
                         <div className="flex-auto md:max-w-lg lg:max-w-2xl">
-                            <h5 className="no-underline font-bold md:text-xl lg:text-2xl">
+                            <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coordinate
                             </h5>
-                            <p className="text-sm md:text-lg">
+                            <p className="text-md md:text-lg">
                                 We will respond as soon as possible to work out
                                 specifics such as time, as well as take any
                                 questions.
@@ -175,15 +175,15 @@ const About: NextPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-row items-start space-x-4 my-3 md:my-5">
+                    <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-purple-500 via-red-400 to-orange-500 p-3">
                             3
                         </div>
                         <div className="flex-auto md:max-w-lg lg:max-w-2xl">
-                            <h5 className="no-underline font-bold md:text-xl lg:text-2xl">
+                            <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coaching
                             </h5>
-                            <p className="text-sm md:text-lg">
+                            <p className="text-md md:text-lg">
                                 Once everything has been decided, one of our
                                 qualified teachers will come to help the team
                                 members learn programming interactively and
