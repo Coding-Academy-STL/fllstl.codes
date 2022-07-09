@@ -108,7 +108,7 @@ const About: NextPage = () => {
                         </h1>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-md max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg sm:text-md my-auto">
+                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Beginners will start by learning basic programming
                             concepts such as variables and functions, as well as
                             their usages and applications which can be built
@@ -116,7 +116,7 @@ const About: NextPage = () => {
                         </p>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-md max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg sm:text-md my-auto">
+                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Intermediate programmers will expand their knowledge
                             by learning concepts further targeting the SPIKE
                             PRIME robots themselves, such as movement and
@@ -135,7 +135,7 @@ const About: NextPage = () => {
                         </h1>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-md max-w-sm md:max-w-md lg:max-w-lg sm:text-md my-auto">
+                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Older, more experienced programmers will be able to
                             explore more of the mathematical side of programming
                             by learning basic physics and vector calculations
