@@ -29,7 +29,7 @@ export default async function handler(
 
     // to them
     await transporter.sendMail({
-      from: `"${emailUser}" <${emailAddress}>`,
+      from: `"${emailFrom}" <${emailAddress}>`,
       to: req.body['personEmail'],
       subject: 'Thank you for contacting us!',
       text: 'We have received your message and will be contacting you as soon as we can!',
