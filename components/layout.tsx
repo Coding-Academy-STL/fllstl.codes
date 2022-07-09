@@ -28,7 +28,7 @@ export default function Layout({
         if (
             window.localStorage.getItem('isDarkMode') === 'true' ||
             (window.localStorage.getItem('isDarkMode') === null &&
-                window.matchMedia('(prefers-color-scheme: dark)').matches)
+                !window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
             setDarkMode(false)
         } else {
@@ -44,7 +44,7 @@ export default function Layout({
 
         window.addEventListener('scroll', onScroll)
         return () => window.removeEventListener('scroll', onScroll)
-    }, [scrollTop]);
+    }, [scrollTop])
 
     return (
         <>
@@ -53,9 +53,8 @@ export default function Layout({
                     {active
                         .toLowerCase()
                         .split(' ')
-                        .map(
-                            (w) => w.charAt(0).toUpperCase() + w.slice(1)
-                        ) + ' | CASTL FLL'}
+                        .map((w) => w.charAt(0).toUpperCase() + w.slice(1)) +
+                        ' | CASTL FLL'}
                 </title>
             </Head>
             <div className={cx({ dark: isDarkMode }, 'transition-colors')}>
@@ -70,7 +69,21 @@ export default function Layout({
                         toggleDarkMode={toggleDarkMode}
                     />
                     <main className={cx({ dark: isDarkMode })}>{children}</main>
-                    <div className='fixed bottom-8 right-8 text-slate-700 dark:text-slate-50'><a href='#' className={cx({ 'pointer-events-none': scrollTop === 0 })}><ChevronDoubleUpIcon className={cx('h-10 w-10 opacity-100 transition-all delay-200', { 'opacity-0': scrollTop === 0 })} /></a></div>
+                    <div className="fixed bottom-8 right-8 text-slate-700 dark:text-slate-50">
+                        <a
+                            href="#"
+                            className={cx({
+                                'pointer-events-none': scrollTop === 0,
+                            })}
+                        >
+                            <ChevronDoubleUpIcon
+                                className={cx(
+                                    'h-10 w-10 opacity-100 transition-all delay-200',
+                                    { 'opacity-0': scrollTop === 0 }
+                                )}
+                            />
+                        </a>
+                    </div>
                     <Footer />
                 </div>
             </div>
