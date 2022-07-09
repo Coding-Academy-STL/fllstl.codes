@@ -71,7 +71,7 @@ const people = [
     {
         name: 'Ashmit Tendolkar',
         role: 'Coach',
-    }
+    },
 ]
 
 const About: NextPage = () => {
@@ -111,12 +111,12 @@ const About: NextPage = () => {
                 </p>
                 <div className="grid grid-cols-2 grid-rows-3 gap-4">
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-400 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-md my-auto">
+                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-base my-auto">
                             Beginner
                         </h1>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
+                        <p className="text-sm md:text-base max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Beginners will start by learning basic programming
                             concepts such as variables and functions, as well as
                             their usages and applications which can be built
@@ -124,7 +124,7 @@ const About: NextPage = () => {
                         </p>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
+                        <p className="text-sm md:text-base max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Intermediate programmers will expand their knowledge
                             by learning concepts further targeting the SPIKE
                             PRIME robots themselves, such as movement and
@@ -133,17 +133,17 @@ const About: NextPage = () => {
                         </p>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-400 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-md my-auto">
+                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-base my-auto">
                             Intermediate
                         </h1>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-400 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-md my-auto">
+                        <h1 className="text-2xl md:text-4xl break-words max-w-sm md:max-w-md lg:max-w-lg max-h-sm md:max-h-md lg:max-h-lg font-bold sm:text-base my-auto">
                             Advanced
                         </h1>
                     </div>
                     <div className="flex flex-col bg-slate-50 text-slate-700 dark:bg-gray-700 dark:text-slate-200 shadow-xl rounded-lg text-center px-2 py-2 md:py-8">
-                        <p className="text-sm md:text-md max-w-sm md:max-w-md lg:max-w-lg my-auto">
+                        <p className="text-sm md:text-base max-w-sm md:max-w-md lg:max-w-lg my-auto">
                             Older, more experienced programmers will be able to
                             explore more of the mathematical side of programming
                             by learning basic physics and vector calculations
@@ -172,7 +172,7 @@ const About: NextPage = () => {
                             <h5 className="font-bold text-lg md:text-xl lg:text-2xl">
                                 Contact us!
                             </h5>
-                            <p className="text-md md:text-lg">
+                            <p className="text-base md:text-lg">
                                 You can contact us through this website, by{' '}
                                 <a>phone</a>, or through our{' '}
                                 <a
@@ -195,7 +195,7 @@ const About: NextPage = () => {
                             <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coordinate
                             </h5>
-                            <p className="text-md md:text-lg">
+                            <p className="text-base md:text-lg">
                                 We will respond as soon as possible to work out
                                 specifics such as time, as well as take any
                                 questions.
@@ -211,7 +211,7 @@ const About: NextPage = () => {
                             <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coaching
                             </h5>
-                            <p className="text-md md:text-lg">
+                            <p className="text-base md:text-lg">
                                 Once everything has been decided, one of our
                                 qualified teachers will come to help the team
                                 members learn programming interactively and
@@ -224,11 +224,11 @@ const About: NextPage = () => {
                 </div>
             </div>
             <div
-                id="contact"
+                id="contact-us"
                 className="flex flex-wrap px-5 justify-center overflow-hidden pt-12 pb-8 lg:py-24 transition-all"
             >
                 <h1 className="block w-full font-extrabold text-center text-5xl text-slate-700 dark:text-slate-50 mb-5">
-                    Contact
+                    Contact us!
                 </h1>
 
                 <form

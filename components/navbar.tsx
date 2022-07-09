@@ -54,7 +54,7 @@ export default function Navbar({
                     <div className="md:flex md:justify-between">
                         <ul
                             className={cx(
-                                'flex flex-col ease-in-out duration-500 mt-4 mx-6 md:flex-row md:space-x-8 md:mt-0 md:text-md md:font-medium'
+                                'flex flex-col ease-in-out duration-500 mt-4 mx-6 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium'
                             )}
                         >
                             <li>
@@ -86,7 +86,7 @@ export default function Navbar({
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#contact">
+                                <Link href="#contact-us">
                                     <a
                                         className={cx(styles.navLink, {
                                             'bg-blue-700 md:bg-transparent text-slate-50 md:text-blue-600 dark:text-white':
