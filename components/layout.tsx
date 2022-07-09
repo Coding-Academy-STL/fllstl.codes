@@ -78,7 +78,7 @@ export default function Layout({
                         >
                             <ChevronDoubleUpIcon
                                 className={cx(
-                                    'h-10 w-10 opacity-100 transition-all delay-200',
+                                    'h-10 w-10 opacity-100 transition-all delay-200 drop-shadow-lg',
                                     { 'opacity-0': scrollTop === 0 }
                                 )}
                             />
