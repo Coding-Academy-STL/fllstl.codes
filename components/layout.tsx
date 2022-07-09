@@ -56,6 +56,34 @@ export default function Layout({
                         .map((w) => w.charAt(0).toUpperCase() + w.slice(1)) +
                         ' | CASTL FLL'}
                 </title>
+
+                {/* metadata */}
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <meta
+                    property="og:title"
+                    content={
+                        active
+                            .toLowerCase()
+                            .split(' ')
+                            .map(
+                                (w) => w.charAt(0).toUpperCase() + w.slice(1)
+                            ) + ' | CASTL FLL'
+                    }
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://fllstl.codes" />
+                <meta
+                    property="og:image"
+                    content="https://fllstl.codes/img/logo.png"
+                />
+                <meta
+                    property="og:description"
+                    content="Teaching FLL team members with all levels of programming experience through engaging, effective, and hands-on lessons for free"
+                />
+                <meta name="theme-color" content="#334155" />
             </Head>
             <div className={cx({ dark: isDarkMode }, 'transition-colors')}>
                 <div
