@@ -14,6 +14,9 @@ import {
     FaEnvelope,
     FaQuestionCircle,
 } from 'react-icons/fa'
+import Alert from '../components/alert'
+import { useRouter } from 'next/router'
+import { useEffect, useState } from 'react'
 
 const people = [
     {
@@ -75,8 +78,13 @@ const people = [
 ]
 
 const About: NextPage = () => {
+    const router = useRouter()
+
     return (
         <Layout active="home">
+            {router.query.hasOwnProperty('messageReceived') &&
+                <Alert alertType="info" content="Thank you for sending us a message! You should receive a confirmation email soon. If you don't, please email us directly at contact@fllstl.codes." />
+            }
             <div
                 id="about"
                 className="flex flex-wrap px-5 justify-center overflow-hidden pt-12 pb-8 lg:py-24 transition-all"
