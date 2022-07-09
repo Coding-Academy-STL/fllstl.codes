@@ -8,7 +8,12 @@ import AboutCard from '../components/aboutCard'
 
 // styles
 // icons
-import { FaGithub, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import {
+    FaGithub,
+    FaInstagram,
+    FaEnvelope,
+    FaQuestionCircle,
+} from 'react-icons/fa'
 
 const people = [
     {
@@ -142,19 +147,26 @@ const About: NextPage = () => {
                     See how you can take advantage of the free services provided
                     by our experienced alumni!
                 </p>
-                <div className="flex flex-col justify-center flex-wrap rounded-xl p-4 md:p-8 md:pl-12 mb-4 text-slate-700 dark:text-slate-50">
+                <div className="flex flex-col justify-center flex-wrap rounded-xl p-4 md:p-8 md:pl-12 md:pb-0 text-slate-700 dark:text-slate-50">
                     <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-cyan-500 via-cyan-400 to-blue-500 p-3">
                             1
                         </div>
-                        <div className="flex-auto md:max-w-lg lg:max-w-2xl">
-                            <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
+                        <div className="mx-auto md:mx-0 flex-auto md:max-w-lg lg:max-w-2xl">
+                            <h5 className="font-bold text-lg md:text-xl lg:text-2xl">
                                 Contact us!
                             </h5>
                             <p className="text-md md:text-lg">
                                 You can contact us through this website, by{' '}
                                 <a>phone</a>, or through our{' '}
-                                <a href="mailto:contact@fllstl.codes">email</a>.
+                                <a
+                                    title="contact@fllstl.codes"
+                                    href="mailto:contact@fllstl.codes"
+                                    className="underline underline-offset-2 decoration-dashed decoration-slate-500"
+                                >
+                                    email
+                                </a>
+                                .
                             </p>
                         </div>
                     </div>
@@ -163,7 +175,7 @@ const About: NextPage = () => {
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-blue-600 via-indigo-500 to-purple-500 p-3">
                             2
                         </div>
-                        <div className="flex-auto md:max-w-lg lg:max-w-2xl">
+                        <div className="mx-auto md:mx-0 flex-auto md:max-w-lg lg:max-w-2xl">
                             <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coordinate
                             </h5>
@@ -175,11 +187,11 @@ const About: NextPage = () => {
                         </div>
                     </div>
 
-                    <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left my-3 md:my-5">
+                    <div className="flex flex-col md:flex-row  items-start md:space-x-4 text-center md:text-left mt-3 md:mt-5">
                         <div className="opacity-70 text-center w-12 flex-none rounded-full object-cover m-auto bg-gradient-to-tr text-slate-50 from-purple-500 via-red-400 to-orange-500 p-3">
                             3
                         </div>
-                        <div className="flex-auto md:max-w-lg lg:max-w-2xl">
+                        <div className="mx-auto md:mx-0 flex-auto md:max-w-lg lg:max-w-2xl">
                             <h5 className="no-underline font-bold text-lg md:text-xl lg:text-2xl">
                                 Coaching
                             </h5>
