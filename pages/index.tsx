@@ -70,7 +70,17 @@ const people = [
     },
     {
         name: 'Aiden Lambert',
+        image: '/img/team/aiden-lambert.png',
         role: 'Coach',
+        bio: "Aiden is a rising junior and enjoys writing close-to-the-metal code. His game engine, Eugene (work in progress), is an example of his interest in low level graphics. During the spring semester, however, all of his programming energy is focused on his second hobby: writing code for the Ladue highschool's robotics team.",
+        links: [
+            {
+                link: 'https://github.com/theVerySharpFlat',
+                node: (
+                    <FaGithub className="inline-block mr-2 mb-2 w-4 fill-slate-700 dark:fill-slate-50" />
+                ),
+            },
+        ],
     },
     {
         name: 'Ashmit Tendolkar',
@@ -83,9 +93,12 @@ const About: NextPage = () => {
 
     return (
         <Layout active="home">
-            {router.query.hasOwnProperty('messageReceived') &&
-                <Alert alertType="info" content="Thank you for sending us a message! You should receive a confirmation email soon. If you don't, please email us directly at contact@fllstl.codes." />
-            }
+            {router.query.hasOwnProperty('messageReceived') && (
+                <Alert
+                    alertType="info"
+                    content="Thank you for sending us a message! You should receive a confirmation email soon. If you don't, please email us directly at contact@fllstl.codes."
+                />
+            )}
             <div
                 id="about"
                 className="flex flex-wrap px-5 justify-center overflow-hidden pt-12 pb-8 lg:py-24 transition-all"
