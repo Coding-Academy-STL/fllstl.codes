@@ -3,7 +3,6 @@ import type { NextPage } from 'next'
 
 // components
 import Layout from '../components/layout'
-import Navbar from '../components/navbar'
 import AboutCard from '../components/aboutCard'
 
 // styles
@@ -12,15 +11,14 @@ import {
     FaGithub,
     FaInstagram,
     FaEnvelope,
-    FaQuestionCircle,
 } from 'react-icons/fa'
 import Alert from '../components/alert'
 import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
 
 const people = [
     {
         name: 'Abheek Dhawan',
+        image: '/img/team/abheek-dhawan.png',
         role: 'Coach',
         bio: "An avid programmer, Abheek competed in FLL for 4 years, achieving the Champion's Award in 2019 at the Razorback Invitational. He has continued with his robotics journey as a programmer for the Ladue HWHS FRC team.",
         links: [
