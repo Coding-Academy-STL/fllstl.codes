@@ -1,26 +1,26 @@
 // react
-import React from 'react'
+import React from 'react';
 
 // components
-import Link from 'next/link'
+import Link from 'next/link';
 
 // styles
-import styles from '../styles/components/Navbar.module.css'
-import cx from 'classnames'
+import styles from '../styles/components/Navbar.module.css';
+import cx from 'classnames';
 // icons
-import { MenuIcon } from '@heroicons/react/solid'
-import { SunIcon, MoonIcon } from '@heroicons/react/solid'
+import { MenuIcon } from '@heroicons/react/solid';
+import { SunIcon, MoonIcon } from '@heroicons/react/solid';
 
 export default function Navbar({
     active,
     isDarkMode,
     toggleDarkMode,
 }: {
-    active: string
-    isDarkMode: boolean
-    toggleDarkMode: () => void
+    active: string;
+    isDarkMode: boolean;
+    toggleDarkMode: () => void;
 }) {
-    const [isMenuOpen, setMenuOpen] = React.useState(false)
+    const [isMenuOpen, setMenuOpen] = React.useState(false);
 
     return (
         <nav
@@ -28,37 +28,37 @@ export default function Navbar({
                 'md:bg-transparent md:dark:bg-transparent bg-white border-gray-200 px-2 sm:px-4 py-5 dark:bg-gray-800'
             )}
         >
-            <div className="flex flex-wrap justify-between md:justify-start items-center mx-auto">
-                <Link href="/" className="pr-2">
-                    <a className="flex items-center">
-                        <span className="self-center text-xl font-semibold whitespace-nowrap text-slate-700 md:text-slate-700 dark:text-white">
+            <div className='flex flex-wrap justify-between md:justify-start items-center mx-auto'>
+                <Link href='/' className='pr-2'>
+                    <a className='flex items-center'>
+                        <span className='self-center text-xl font-semibold whitespace-nowrap text-slate-700 md:text-slate-700 dark:text-white'>
                             CASTL FLL
                         </span>
                     </a>
                 </Link>
                 <button
-                    data-collapse-toggle="mobile-menu"
-                    type="button"
-                    className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    data-collapse-toggle='mobile-menu'
+                    type='button'
+                    className='inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
                     onClick={() => setMenuOpen(!isMenuOpen)}
                 >
-                    <MenuIcon className="h-5 w-5 text-gray-500 dark:text-white" />
+                    <MenuIcon className='h-5 w-5 text-gray-500 dark:text-white' />
                 </button>
                 <div
                     className={cx(
                         { hidden: !isMenuOpen },
                         'w-full md:block md:w-auto md:grow'
                     )}
-                    id="mobile-menu"
+                    id='mobile-menu'
                 >
-                    <div className="md:flex md:justify-between">
+                    <div className='md:flex md:justify-between'>
                         <ul
                             className={cx(
                                 'flex flex-col ease-in-out duration-500 mt-4 mx-6 md:flex-row md:space-x-8 md:mt-0 md:text-base md:font-medium'
                             )}
                         >
                             <li>
-                                <Link href="#">
+                                <Link href='#'>
                                     <a
                                         className={cx(styles.navLink, {
                                             'bg-blue-700 md:bg-transparent text-slate-50 md:text-blue-600 dark:text-white':
@@ -72,7 +72,7 @@ export default function Navbar({
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#about">
+                                <Link href='#about'>
                                     <a
                                         className={cx(styles.navLink, {
                                             'bg-blue-700 md:bg-transparent text-slate-50 md:text-blue-600 dark:text-white':
@@ -86,7 +86,7 @@ export default function Navbar({
                                 </Link>
                             </li>
                             <li>
-                                <Link href="#contact-us">
+                                <Link href='#contact-us'>
                                     <a
                                         className={cx(styles.navLink, {
                                             'bg-blue-700 md:bg-transparent text-slate-50 md:text-blue-600 dark:text-white':
@@ -106,7 +106,7 @@ export default function Navbar({
                             )}
                         >
                             <li>
-                                <a href="#learn-more">
+                                <a href='#learn-more'>
                                     <button
                                         className={cx(
                                             styles.navButton,
@@ -118,7 +118,7 @@ export default function Navbar({
                                 </a>
                             </li>
                             <li>
-                                <a href="#get-started">
+                                <a href='#get-started'>
                                     <button
                                         className={cx(
                                             styles.navButton,
@@ -131,8 +131,8 @@ export default function Navbar({
                             </li>
                             <li>
                                 <button
-                                    type="button"
-                                    className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                                    type='button'
+                                    className='inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600'
                                     onClick={toggleDarkMode}
                                 >
                                     <SunIcon
@@ -156,5 +156,5 @@ export default function Navbar({
                 </div>
             </div>
         </nav>
-    )
+    );
 }

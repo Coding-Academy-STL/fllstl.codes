@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 
 // components
-import Navbar from '../components/navbar'
-import Footer from './footer'
+import Navbar from '../components/navbar';
+import Footer from './footer';
 
 // styles
-import cx from 'classnames'
-import Head from 'next/head'
-import { ChevronDoubleUpIcon } from '@heroicons/react/outline'
+import cx from 'classnames';
+import Head from 'next/head';
+import { ChevronDoubleUpIcon } from '@heroicons/react/outline';
 
 export default function Layout({
     children,
     active,
 }: {
-    children: React.ReactNode
-    active: string
+    children: React.ReactNode;
+    active: string;
 }) {
-    const [isDarkMode, setDarkMode] = useState(true)
-    const [scrollTop, setScrollTop] = useState(0)
+    const [isDarkMode, setDarkMode] = useState(true);
+    const [scrollTop, setScrollTop] = useState(0);
 
     const toggleDarkMode = () => {
-        setDarkMode(!isDarkMode)
-        window.localStorage.setItem('isDarkMode', `${isDarkMode}`)
-    }
+        setDarkMode(!isDarkMode);
+        window.localStorage.setItem('isDarkMode', `${isDarkMode}`);
+    };
 
     useEffect(() => {
         if (
@@ -30,21 +30,21 @@ export default function Layout({
             (window.localStorage.getItem('isDarkMode') === null &&
                 !window.matchMedia('(prefers-color-scheme: dark)').matches)
         ) {
-            setDarkMode(false)
+            setDarkMode(false);
         } else {
-            setDarkMode(true)
+            setDarkMode(true);
         }
-    }, [isDarkMode])
+    }, [isDarkMode]);
 
     useEffect(() => {
         function onScroll() {
-            let currentPosition = window.pageYOffset
-            setScrollTop(currentPosition <= 0 ? 0 : currentPosition)
+            let currentPosition = window.pageYOffset;
+            setScrollTop(currentPosition <= 0 ? 0 : currentPosition);
         }
 
-        window.addEventListener('scroll', onScroll)
-        return () => window.removeEventListener('scroll', onScroll)
-    }, [scrollTop])
+        window.addEventListener('scroll', onScroll);
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [scrollTop]);
 
     return (
         <>
@@ -59,11 +59,11 @@ export default function Layout({
 
                 {/* metadata */}
                 <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0"
+                    name='viewport'
+                    content='width=device-width, initial-scale=1.0'
                 />
                 <meta
-                    property="og:title"
+                    property='og:title'
                     content={
                         active
                             .toLowerCase()
@@ -73,17 +73,17 @@ export default function Layout({
                             ) + ' | CASTL FLL'
                     }
                 />
-                <meta property="og:type" content="website" />
-                <meta property="og:url" content="https://fllstl.codes" />
+                <meta property='og:type' content='website' />
+                <meta property='og:url' content='https://fllstl.codes' />
                 <meta
-                    property="og:image"
-                    content="https://fllstl.codes/img/logo.png"
+                    property='og:image'
+                    content='https://fllstl.codes/img/logo.png'
                 />
                 <meta
-                    property="og:description"
-                    content="Teaching FLL team members with all levels of programming experience through engaging, effective, and hands-on lessons for free"
+                    property='og:description'
+                    content='Teaching FLL team members with all levels of programming experience through engaging, effective, and hands-on lessons for free'
                 />
-                <meta name="theme-color" content="#334155" />
+                <meta name='theme-color' content='#334155' />
             </Head>
             <div className={cx({ dark: isDarkMode }, 'transition-colors')}>
                 <div
@@ -97,9 +97,9 @@ export default function Layout({
                         toggleDarkMode={toggleDarkMode}
                     />
                     <main className={cx({ dark: isDarkMode })}>{children}</main>
-                    <div className="fixed bottom-8 right-8 text-slate-700 dark:text-slate-50">
+                    <div className='fixed bottom-8 right-8 text-slate-700 dark:text-slate-50'>
                         <a
-                            href="#"
+                            href='#'
                             className={cx({
                                 'pointer-events-none': scrollTop === 0,
                             })}
@@ -116,5 +116,5 @@ export default function Layout({
                 </div>
             </div>
         </>
-    )
+    );
 }

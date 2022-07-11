@@ -1,81 +1,81 @@
-import { ReactNode, useState } from 'react'
+import { ReactNode, useState } from 'react';
 
-type AlertType = 'success' | 'info' | 'alert' | 'warning' | 'error'
+type AlertType = 'success' | 'info' | 'alert' | 'warning' | 'error';
 
-import cx from 'classnames'
+import cx from 'classnames';
 
-import { ImCancelCircle } from 'react-icons/im'
+import { ImCancelCircle } from 'react-icons/im';
 
 const getAlertBgClass = (alertType: AlertType) => {
     switch (alertType) {
         case 'success':
-            return 'bg-lime-100'
-            break
+            return 'bg-lime-100';
+            break;
         case 'info':
-            return 'bg-cyan-100'
-            break
+            return 'bg-cyan-100';
+            break;
         case 'alert':
-            return 'bg-slate-100'
-            break
+            return 'bg-slate-100';
+            break;
         case 'warning':
-            return 'bg-yellow-100'
-            break
+            return 'bg-yellow-100';
+            break;
         case 'error':
-            return 'bg-red-100'
-            break
+            return 'bg-red-100';
+            break;
     }
-}
+};
 
 const getAlertBorderClass = (alertType: AlertType) => {
     switch (alertType) {
         case 'success':
-            return 'border-lime-400'
-            break
+            return 'border-lime-400';
+            break;
         case 'info':
-            return 'border-cyan-400'
-            break
+            return 'border-cyan-400';
+            break;
         case 'alert':
-            return 'border-slate-400'
-            break
+            return 'border-slate-400';
+            break;
         case 'warning':
-            return 'border-yellow-400'
-            break
+            return 'border-yellow-400';
+            break;
         case 'error':
-            return 'border-red-400'
-            break
+            return 'border-red-400';
+            break;
     }
-}
+};
 
 const getAlertFontClass = (alertType: AlertType) => {
     switch (alertType) {
         case 'success':
-            return 'text-lime-700'
-            break
+            return 'text-lime-700';
+            break;
         case 'info':
-            return 'text-cyan-700'
-            break
+            return 'text-cyan-700';
+            break;
         case 'alert':
-            return 'text-slate-700'
-            break
+            return 'text-slate-700';
+            break;
         case 'warning':
-            return 'text-yellow-700'
-            break
+            return 'text-yellow-700';
+            break;
         case 'error':
-            return 'text-red-700'
-            break
+            return 'text-red-700';
+            break;
     }
-}
+};
 
 export default function Alert({
     alertType,
     content,
     hidden,
 }: {
-    alertType: AlertType
-    content: string
-    hidden: boolean
+    alertType: AlertType;
+    content: string;
+    hidden: boolean;
 }) {
-    const [isRemoved, setRemoved] = useState(false)
+    const [isRemoved, setRemoved] = useState(false);
 
     return (
         <div
@@ -86,15 +86,15 @@ export default function Alert({
                 getAlertFontClass(alertType),
                 { hidden: isRemoved || hidden }
             )}
-            role="alert"
+            role='alert'
         >
             <span>{content}</span>
-            <span className="float-right my-auto">
+            <span className='float-right my-auto'>
                 <ImCancelCircle
-                    role="button"
+                    role='button'
                     onClick={() => setRemoved(true)}
                 />
             </span>
         </div>
-    )
+    );
 }
