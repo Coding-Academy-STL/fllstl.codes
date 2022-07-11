@@ -46,7 +46,6 @@ const getAlertBorderClass = (alertType: AlertType) => {
     }
 }
 
-
 const getAlertFontClass = (alertType: AlertType) => {
     switch (alertType) {
         case 'success':
@@ -70,20 +69,31 @@ const getAlertFontClass = (alertType: AlertType) => {
 export default function Alert({
     alertType,
     content,
+    hidden,
 }: {
     alertType: AlertType
     content: string
+    hidden: boolean
 }) {
     const [isRemoved, setRemoved] = useState(false)
 
     return (
         <div
-            className={cx("flex flex-row justify-between border px-4 py-3 rounded relative m-5", getAlertBgClass(alertType), getAlertBorderClass(alertType), getAlertFontClass(alertType), { hidden: isRemoved })}
+            className={cx(
+                'flex flex-row justify-between border px-4 py-3 rounded relative m-5',
+                getAlertBgClass(alertType),
+                getAlertBorderClass(alertType),
+                getAlertFontClass(alertType),
+                { hidden: isRemoved || hidden }
+            )}
             role="alert"
         >
             <span>{content}</span>
             <span className="float-right my-auto">
-                <ImCancelCircle role='button' onClick={() => setRemoved(true)} />
+                <ImCancelCircle
+                    role="button"
+                    onClick={() => setRemoved(true)}
+                />
             </span>
         </div>
     )
