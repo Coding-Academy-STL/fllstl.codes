@@ -80,7 +80,10 @@ const people = [
     },
     {
         name: 'Ashmit Tendolkar',
+        image: '/img/team/ashmit-tendolkar.png',
         role: 'Coach',
+        bio: 'Ashmit is a rising junior who enjoys programming in his free time. His other hobbies include tennis and guitar as well as playing video games. He also hopes to be an aerospace engineer one day.',
+
     },
 ];
 
