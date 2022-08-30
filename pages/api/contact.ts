@@ -38,6 +38,8 @@ export default async function handler(
         });
 
         // to them
+        // (save to logs just in case)
+        console.log(req.body['personEmail']);
         await transporter.sendMail({
             from: `"${emailFrom}" <${emailAddress}>`,
             to: req.body['personEmail'],
