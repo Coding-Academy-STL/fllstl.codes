@@ -42,6 +42,7 @@ const people = [
     },
     {
         name: 'Aric Wang',
+        image: '/img/team/aric-wang.png',
         role: 'Coach',
         bio: "Aric Wang is a 16-year-old rising junior at LHWHS. In his freetime, he enjoys playing piano, drawing, and playing online videogames with his friends. He participated in FLL for 3 years, achieving the Champion's Award in 2019 at the Razorback Invitational.",
     },
@@ -53,6 +54,7 @@ const people = [
     },
     {
         name: 'Samuel Wiseman',
+        image: '/img/team/samuel-wiseman.png',
         role: 'Coach',
         bio: 'Samuel Wiseman, a rising junior at LHWHS who is pursuing a software engineering career. Programmer with over 6 years experience, enrolled at numerous clubs and avid Java hater.',
         links: [
