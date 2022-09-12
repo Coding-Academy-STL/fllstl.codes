@@ -25,7 +25,7 @@ export default async function handler(
         });
 
         // to us
-        await transporter.sendMail({
+        const toUs = {
             from: `"${req.body['personName']}" <${emailAddress}>`,
             to: emailAddress,
             subject: 'Inquiry',
@@ -35,11 +35,12 @@ export default async function handler(
                 req.body['inquiryData'] +
                 '\n\n' +
                 `Can be contacted at: ${req.body['personEmail']}`,
-        });
+        }
+        // log for now
+        console.log(toUs);
+        await transporter.sendMail(toUs);
 
         // to them
-        // (save to logs just in case)
-        console.log(req.body['personEmail']);
         await transporter.sendMail({
             from: `"${emailFrom}" <${emailAddress}>`,
             to: req.body['personEmail'],
