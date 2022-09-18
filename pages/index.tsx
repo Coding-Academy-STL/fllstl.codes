@@ -321,13 +321,13 @@ const About: NextPage = () => {
                             className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
                         />
                     </form>
-                    <p className='block w-full text-center text-slate-700 dark:text-slate-50 mt-2'>...or{' '}
+                    <p className='block w-full text-center text-slate-700 dark:text-slate-50 mt-2'>...or email us directly at{' '}
                         <a
                             title='contact@fllstl.codes'
                             href='mailto:contact@fllstl.codes'
                             className='underline underline-offset-2 decoration-dashed decoration-slate-500'
                         >
-                            email us directly
+                            contact@fllstl.codes
                         </a>
                     </p>
                 </div>
